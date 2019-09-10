@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			Calendar Test
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-padding">
+		<div class="app">
+			<div class="app-top"></div>
+
+			<div class="app-calendar" *ngIf="calendarVisible">
+				<full-calendar
+					#calendar
+					defaultView="dayGridMonth"
+					[header]="{
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,listMonth'
+      }"
+					[plugins]="calendarPlugins"
+					[eventSources]="sourceStuff"
+					(dateClick)="handleDateClick($event)"
+				></full-calendar>
+			</div>
+		</div>
+	</div>
+</ion-content>

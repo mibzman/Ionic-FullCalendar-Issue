@@ -1,0 +1,7 @@
+{
+  "name": "cal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
